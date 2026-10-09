@@ -1,0 +1,94 @@
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#f5f2eb;color:#171717;font-family:"DM Sans",sans-serif}
+a{text-decoration:none;color:inherit}
+.nav{height:76px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;background:#f5f2eb;border-bottom:1px solid #ddd7cc}
+.brand{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.14em}
+.mark{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#171717;color:#fff;font-family:"Playfair Display"}
+.nav nav{display:flex;gap:32px;font-size:13px}
+.nav-btn,.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:13px 21px;font-weight:700;font-size:13px}
+.nav-btn,.dark{background:#171717;color:#fff}
+.light{background:#fff;color:#171717}
+.outline{border:1px solid #fff;color:#fff}
+.menu{display:none;border:0;background:none;font-size:24px;cursor:pointer}
+.hero{min-height:680px;padding:75px 5%;display:grid;grid-template-columns:1fr 1fr;gap:7%;align-items:center;background:#e8e1d5}
+.eyebrow{margin:0 0 15px;font-size:10px;letter-spacing:.19em;font-weight:700;color:#776f63}
+.hero h1,h2{font-family:"Playfair Display",serif;line-height:.93;margin:0}
+.hero h1{font-size:clamp(52px,7vw,88px)}
+h2{font-size:clamp(43px,5vw,67px)}
+i{font-weight:600}
+.hero-copy>p:not(.eyebrow){max-width:550px;line-height:1.75;color:#5e594f;font-size:16px;margin:28px 0}
+.buttons{display:flex;gap:10px;flex-wrap:wrap}
+.trust{display:flex;gap:17px;flex-wrap:wrap;margin-top:28px;font-size:10px;color:#70695e}
+.hero-car{position:relative}
+.photo-placeholder{height:500px;background:linear-gradient(135deg,#d4cfc5,#eeeae2);display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid #cec8bd;color:#777064;text-align:center}
+.photo-placeholder strong{font-size:12px;letter-spacing:.16em}
+.photo-placeholder span{font-size:10px;margin-top:7px;color:#9a9387}
+.hero-tag{position:absolute;bottom:22px;left:-28px;padding:19px 22px;background:#171717;color:#fff;display:flex;flex-direction:column;gap:4px}
+.hero-tag b{font-family:"Playfair Display";font-size:20px}
+.hero-tag small{font-size:10px;color:#aaa}
+.intro,.section{padding:100px 5%}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:8%;background:#fff}
+.intro>p,.section-head>p{color:#696258;line-height:1.8}
+.intro>p{max-width:530px;margin-top:30px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:35px;margin-bottom:45px}
+.section-head>p{max-width:500px;margin:0}
+.cars{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.car{background:#fff;border:1px solid #ded8ce}
+.car-photo{height:355px}
+.card-body{padding:25px}
+.card-title{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.card-title h3{font-family:"Playfair Display";font-size:29px;margin:0}
+.pill{border:1px solid #cec7bc;border-radius:30px;padding:7px 10px;font-size:9px;letter-spacing:.13em;white-space:nowrap}
+.card-body>p{color:#716a60;line-height:1.65}
+.arrow{font-size:12px;font-weight:700}
+.airport{margin-top:24px;background:#d8d0c2;padding:30px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.airport h3,.tour-vehicle h3{font-family:"Playfair Display";font-size:30px;margin:0}
+.airport p:last-child,.tour-vehicle p{margin-bottom:0;color:#696257}
+.white{background:#fff}
+.tour-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.tour-card{background:#f0ede7;border:1px solid #e2ddd4;padding:24px;min-height:160px}
+.tour-card span{font-size:9px;letter-spacing:.15em;color:#898174}
+.tour-card h3{font-family:"Playfair Display";font-size:21px;line-height:1.12;margin:14px 0 0}
+.tour-vehicle{margin-top:20px;padding:24px;background:#171717;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.tour-vehicle p{color:#aaa}
+.table-wrap{overflow:auto;background:#fff}
+.pricing{background:#e8e1d5}
+.pricing table{width:100%;min-width:720px;border-collapse:collapse}
+.pricing th,.pricing td{padding:15px 17px;text-align:left;border-bottom:1px solid #e5e0d8;font-size:12px}
+.pricing th{background:#171717;color:#fff;text-transform:uppercase;letter-spacing:.12em;font-size:9px}
+.why{display:grid;grid-template-columns:.7fr 1.3fr;gap:8%}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#ddd8cf}
+.features article{background:#fff;padding:29px;min-height:205px}
+.features article>span{font-size:10px;color:#948c80}
+.features h3{font-family:"Playfair Display";font-size:24px;margin:23px 0 8px}
+.features p{color:#70695f;line-height:1.6}
+.contact{padding:100px 5%;background:#171717;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:7%;align-items:center}
+.contact .eyebrow{color:#aaa}
+.contact h2{font-size:clamp(45px,5vw,70px)}
+.contact>div:first-child>p:last-child{max-width:500px;color:#aaa;line-height:1.7}
+.contact-buttons{display:flex;flex-direction:column;gap:12px}
+.big{padding:18px}
+.locations{grid-column:1/-1;border-top:1px solid #333;padding-top:22px;color:#888;font-size:11px;letter-spacing:.1em}
+footer{padding:28px 5%;background:#101010;color:#999;display:flex;gap:15px;align-items:center;font-size:11px}
+footer b{color:#fff;letter-spacing:.15em}
+footer small{margin-left:auto}
+@media(max-width:800px){
+  .nav nav,.nav-btn{display:none}
+  .menu{display:block}
+  .nav nav.show{display:flex;position:absolute;top:76px;left:0;right:0;padding:20px 5%;background:#f5f2eb;flex-direction:column;gap:18px;border-bottom:1px solid #ddd7cc}
+  .hero,.intro,.why,.contact{grid-template-columns:1fr}
+  .hero{padding-top:55px}
+  .photo-placeholder{height:330px}
+  .hero-tag{left:12px}
+  .section-head{display:block}
+  .section-head>p{margin-top:25px}
+  .cars,.tour-grid{grid-template-columns:1fr}
+  .airport,.tour-vehicle{display:block}
+  .airport .btn,.tour-vehicle .btn{margin-top:18px}
+  .features{margin-top:35px}
+  .contact-buttons{margin-top:35px}
+  footer{display:block}
+  footer small{display:block;margin:15px 0 0}
+}
