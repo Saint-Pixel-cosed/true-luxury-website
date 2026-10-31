@@ -128,7 +128,7 @@ if (tourGrid) {
         ${tour.image ? `
           <img
             class="tour-image"
-            src="images/${tour.image}"
+            src="${encodeURI(`images/${tour.image}`)}"
             alt="${tour.title}"
             loading="lazy"
           >
