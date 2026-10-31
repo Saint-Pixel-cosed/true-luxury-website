@@ -1,21 +1,73 @@
+
 const tours = [
-  "Bamboo rafting and Montego Bay highlights & shopping",
-  "Blue Hole + Dunns River Falls, Ocho Rios",
-  "Rick’s Cafe + Negril Beach",
-  "South Coast tour",
-  "ATV + horseback riding, Montego Bay",
-  "Dunn’s River + catamaran cruise",
-  "Luminous Lagoon + rafting, Falmouth",
-  "Montego Bay nightlife tour",
-  "Montego Bay airport to Montego Bay hotels",
-  "Montego Bay airport to Falmouth hotels",
-  "Montego Bay airport to Negril hotels",
-  "Montego Bay airport to Ocho Rios hotels",
-  "Montego Bay airport to Grand Palladium",
-  "Bob Marley, St. Ann",
-  "Clear kayak photoshoot",
-  "MBJ airport to Princess Grand",
-  "Doctor’s Cave Beach from Montego Bay cruise port"
+  {
+    title: "Bamboo rafting and Montego Bay highlights & shopping",
+    image: "bamboo-rafting.jpg.JPEG"
+  },
+  {
+    title: "Blue Hole + Dunns River Falls, Ocho Rios",
+    image: "dunns-river-falls.jpg.JPEG"
+  },
+  {
+    title: "Rick’s Cafe + Negril Beach",
+    image: "ricks-cafe-negril.jpg.JPEG"
+  },
+  {
+    title: "South Coast tour",
+    image: "south-coast.jpg.JPEG"
+  },
+  {
+    title: "ATV + horseback riding, Montego Bay",
+    image: "atv-horseback.jpg.JPEG"
+  },
+  {
+    title: "Dunn’s River + catamaran cruise",
+    image: "dunns-river-catamaran.jpg.JPEG"
+  },
+  {
+    title: "Luminous Lagoon + rafting, Falmouth",
+    image: "luminous-lagoon.jpg.JPEG"
+  },
+  {
+    title: "Montego Bay nightlife tour",
+    image: "mobay-nightlife.jpg.JPEG"
+  },
+  {
+    title: "Montego Bay airport to Montego Bay hotels",
+    image: "mbj-montego-bay.jpg.JPEG"
+  },
+  {
+    title: "Montego Bay airport to Falmouth hotels",
+    image: "mbj-falmouth.jpg.JPEG"
+  },
+  {
+    title: "Montego Bay airport to Negril hotels",
+    image: "mbj-negril.jpg.JPEG"
+  },
+  {
+    title: "Montego Bay airport to Ocho Rios hotels",
+    image: "mbj-ocho-rios.jpg.JPEG"
+  },
+  {
+    title: "Montego Bay airport to Grand Palladium",
+    image: null
+  },
+  {
+    title: "Bob Marley, St. Ann",
+    image: "bob-marley-nine-mile.jpg.JPEG"
+  },
+  {
+    title: "Clear kayak photoshoot",
+    image: "clear-kayak-photoshoot.jpg.JPEG"
+  },
+  {
+    title: "MBJ airport to Princess Grand",
+    image: "mbj-princess-grand.jpg.JPEG"
+  },
+  {
+    title: "Doctor’s Cave Beach from Montego Bay cruise port",
+    image: "doctors-cave-beach.jpg.JPEG"
+  }
 ];
 
 const prices = [
@@ -73,7 +125,15 @@ if (tourGrid) {
     .map((tour, index) => `
       <article class="tour-card">
         <span>TOUR ${String(index + 1).padStart(2, "0")}</span>
-        <h3>${tour}</h3>
+        ${tour.image ? `
+          <img
+            class="tour-image"
+            src="images/${tour.image}"
+            alt="${tour.title}"
+            loading="lazy"
+          >
+        ` : ""}
+        <h3>${tour.title}</h3>
       </article>
     `)
     .join("");
