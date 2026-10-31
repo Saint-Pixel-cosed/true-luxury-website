@@ -1,4 +1,3 @@
-
 const tours = [
   "Bamboo rafting and Montego Bay highlights & shopping",
   "Blue Hole + Dunns River Falls, Ocho Rios",
@@ -53,29 +52,43 @@ const prices = [
 const menuButton = document.querySelector(".menu");
 const nav = document.querySelector(".nav nav");
 
-menuButton.addEventListener("click", () => {
-  nav.classList.toggle("show");
-});
+if (menuButton && nav) {
+  menuButton.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("show");
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+  });
 
-nav.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => nav.classList.remove("show"));
-});
+  nav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("show");
+      menuButton.setAttribute("aria-expanded", "false");
+    });
+  });
+}
 
-document.querySelector("#tour-grid").innerHTML = tours
-  .map((tour, index) => `
-    <article class="tour-card">
-      <span>TOUR ${String(index + 1).padStart(2, "0")}</span>
-      <h3>${tour}</h3>
-    </article>
-  `)
-  .join("");
+const tourGrid = document.querySelector("#tour-grid");
 
-document.querySelector("#prices").innerHTML = prices
-  .map(price => `
-    <tr>
-      <td>${price[0]}</td>
-      <td>US$${price[1]}</td>
-      <td>US$${price[2]}</td>
-    </tr>
-  `)
-  .join("");
+if (tourGrid) {
+  tourGrid.innerHTML = tours
+    .map((tour, index) => `
+      <article class="tour-card">
+        <span>TOUR ${String(index + 1).padStart(2, "0")}</span>
+        <h3>${tour}</h3>
+      </article>
+    `)
+    .join("");
+}
+
+const priceTable = document.querySelector("#prices");
+
+if (priceTable) {
+  priceTable.innerHTML = prices
+    .map(price => `
+      <tr>
+        <td>${price[0]}</td>
+        <td>US$${price[1]}</td>
+        <td>US$${price[2]}</td>
+      </tr>
+    `)
+    .join("");
+}
