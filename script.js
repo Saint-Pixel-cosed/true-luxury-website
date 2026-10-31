@@ -9,8 +9,7 @@ const tours = [
     image: "dunns-river-falls.jpg.JPEG"
   },
   {
-    title: "Rick’s Cafe + Negril Beach",
-    image: "ricks-cafe-negril.jpg.JPEG"
+    { title: "Rick’s Cafe + Negril Beach", image: " ricks-cafe-negril.jpg.JPEG" },
   },
   {
     title: "South Coast tour",
@@ -42,7 +41,7 @@ const tours = [
   },
   {
     title: "Montego Bay airport to Negril hotels",
-    image: "mbj-negril.jpg.JPEG"
+    image: " mbj-negril.jpg.JPEG"
   },
   {
     title: "Montego Bay airport to Ocho Rios hotels",
