@@ -9,7 +9,8 @@ const tours = [
     image: "dunns-river-falls.jpg.JPEG"
   },
   {
-    { title: "Rick’s Cafe + Negril Beach", image: " ricks-cafe-negril.jpg.JPEG" },
+    title: "Rick’s Cafe + Negril Beach",
+    image: " ricks-cafe-negril.jpg.JPEG"
   },
   {
     title: "South Coast tour",
